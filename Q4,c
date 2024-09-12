@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void main() {
+
+    float Car_fuel_avg,first_trip_cost, second_trip_cost, total_fuel_used, total_fuel_cost;
+    int distance_single_trip = 1207;
+    int forward_fuel_price = 118;
+    int return_fuel_price = 123;
+
+    printf("Input car fuel avg : ");
+    scanf("%f",&Car_fuel_avg);
+
+    if (Car_fuel_avg <= 0)
+    {
+        printf("\nInput is not valid");
+    }
+    else
+    {
+        first_trip_cost = distance_single_trip * forward_fuel_price;
+        second_trip_cost = distance_single_trip * return_fuel_price;
+        total_fuel_cost = first_trip_cost + second_trip_cost;
+        total_fuel_used = (2 * distance_single_trip)/Car_fuel_avg;
+
+        printf("\nYour Total fuel cost is : %.2f\n Your total fuel used is : %.2f", total_fuel_cost, total_fuel_used);
+        
+    }
+}
